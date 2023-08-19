@@ -28,4 +28,3 @@ server_scripts{
 }
 
 ui_page "ui/dist/index.html"
--- ui_page "http://localhost:3000"

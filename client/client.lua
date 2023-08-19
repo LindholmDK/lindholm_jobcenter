@@ -13,7 +13,6 @@ CreateThread(function ()
             description = GetLocale("title"),
             developer = "Lindholm",
             ui = GetCurrentResourceName() .. "/ui/dist/index.html",
-            -- ui = "http://localhost:3000", -- dev version
             icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
         })
 
