@@ -28,3 +28,4 @@ server_scripts{
 }
 
 ui_page "ui/dist/index.html"
+
