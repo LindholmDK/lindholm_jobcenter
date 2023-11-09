@@ -29,14 +29,14 @@ MySQL.ready(
 )
 
 function AddJob(identifier, job, grade, rem)
-    MySQL.Sync.execute(
+    MySQL.Async.execute(
         "INSERT INTO `user_jobs`(`identifier`, `job`, `grade`, `removeable`) VALUES (@identifier, @job, @grade, @removeable)",
         {["@identifier"] = identifier, ["@job"] = job, ["@grade"] = grade, ["@removeable"] = rem}
     )
 end
 
 function RemoveJob(identifier, job, grade)
-    MySQL.Sync.execute(
+    MySQL.Async.execute(
         "DELETE FROM `user_jobs` WHERE identifier = @identifier AND job = @job AND grade = @grade",
         {["@identifier"] = identifier, ["@job"] = job, ["@grade"] = grade}
     )
@@ -73,7 +73,7 @@ ESX.RegisterServerCallback("Lindholm_job:getJobs",function(source, cb)
                 end
 
                 if JobInfo[v.job] == nil then
-                    print('[Lindholm Jobcenter] Data fundet for job: ' .. v.job)
+                    -- print('[Lindholm Jobcenter] Data fundet for job: ' .. v.job)
                 else
 
                 

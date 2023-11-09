@@ -8,8 +8,8 @@
 }
 
 [data-theme='dark'] {
-  --background-primary: #303030;
-  --background-secondary: #242424;
+  --background-primary: #1f1f1f;
+  --background-secondary: #131313;
   --background-highlight: rgb(20, 20, 20);
 
   --text-primary: #f2f2f7;

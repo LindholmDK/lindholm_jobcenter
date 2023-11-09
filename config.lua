@@ -1,6 +1,5 @@
 Config = {
 
-	Locale = "da",
 	AutomatiskGem = true,
 	MaxJobs = 7,
 

@@ -9,10 +9,11 @@ CreateThread(function ()
     local function AddApp()
         local added, errorMessage = exports["lb-phone"]:AddCustomApp({
             identifier = identifier,
-            name = GetLocale("title"),
-            description = GetLocale("title"),
+            name = "Jobcenter",
+            description = "App til at holde styr på dine jobs.",
             developer = "Lindholm",
             ui = GetCurrentResourceName() .. "/ui/dist/index.html",
+            -- ui = "http://localhost:3000", -- dev version
             icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
         })
 
@@ -51,8 +52,6 @@ RegisterNUICallback("Jobcenter", function(data,cb)
             local job, grade = data.name, data.grade
             TriggerServerEvent("Lindholm_Job:removeJob", job, grade)
             cb("ok")
-        elseif action == "getLocales" then
-            cb(Locales[Config.Locale])
         end
     end)
 end)
