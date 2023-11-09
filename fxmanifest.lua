@@ -7,14 +7,9 @@ author "Lindholm"
 
 shared_script '@es_extended/imports.lua'
 
-lua54 'yes'
 
-escrow_ignore {
-    'config.lua',
-    'locales.lua',
-    'client/client.lua',
-    'server/server.lua',
-  }
+
+lua54 'yes'
 
 files {
     "ui/dist/**/*",
@@ -33,5 +28,4 @@ server_scripts{
 }
 
 ui_page "ui/dist/index.html"
--- ui_page "http://localhost:3000"
 
